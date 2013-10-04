@@ -1063,7 +1063,7 @@ NetworkEvaluator* VoreenApplication::getNetworkEvaluator() const {
 
 NetworkEvaluator* VoreenApplication::getNetworkEvaluator(Processor* p) const {
     tgtAssert(p, "null pointer passed");
-    for(std::set<NetworkEvaluator*>::iterator it = networkEvaluators_.begin(); it != networkEvaluators_.end(); it++) {
+    for(std::set<NetworkEvaluator*>::const_iterator it = networkEvaluators_.begin(); it != networkEvaluators_.end(); it++) {
         std::vector<Processor*> pv = (*it)->getProcessorNetwork()->getProcessors();
         for(size_t i = 0; i < pv.size(); i++) {
             if(pv.at(i) == p)
@@ -1075,7 +1075,7 @@ NetworkEvaluator* VoreenApplication::getNetworkEvaluator(Processor* p) const {
 
 NetworkEvaluator* VoreenApplication::getNetworkEvaluator(ProcessorNetwork* network) const {
     tgtAssert(network, "null pointer passed");
-    for(std::set<NetworkEvaluator*>::iterator it = networkEvaluators_.begin(); it != networkEvaluators_.end(); it++) {
+    for(std::set<NetworkEvaluator*>::const_iterator it = networkEvaluators_.begin(); it != networkEvaluators_.end(); it++) {
         if ((*it)->getProcessorNetwork() == network)
             return (*it);
     }

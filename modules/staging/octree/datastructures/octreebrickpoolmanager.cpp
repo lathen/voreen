@@ -33,13 +33,14 @@
 #include <time.h>
 #include <limits>
 #include <fstream>
-#include <stdint.h>
+//#include <stdint.h>
 
 #include "tgt/assert.h"
 #include "tgt/logmanager.h"
 #include "tgt/tgt_math.h"
 #include "tgt/filesystem.h"
 #include "tgt/vector.h"
+#include "tgt/types.h"
 
 using tgt::svec3;
 using tgt::vec3;

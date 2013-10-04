@@ -29,7 +29,7 @@
 
 #include "voreen/core/utils/stringutils.h"
 #include "voreen/core/datastructures/volume/volume.h"
-#include <stdint.h>
+//#include <stdint.h>
 
 #include "tgt/assert.h"
 #include "tgt/logmanager.h"

@@ -149,6 +149,8 @@ protected:
      */
     void drawDistanceLegend(float xl = 0.f, float xr = 1.f, float yd = 0.f, float yu = 1.f);
 
+    void adjustPropertyVisibilities();
+
     RenderPort outport_;
     VolumePort inport_;
     RenderPort legendPort_;                   ///< private port used for creating the legend texture
@@ -174,8 +176,6 @@ private:
      * @param the text output
      */
     void scaleLegend(float oldValue, float &outFloat, std::string& outStr);
-
-    void adjustPropertyVisibilities();
 
 };
 
